@@ -42,10 +42,10 @@ SHLIB = -shared
 all: libAlong32.so
 
 libAlong32.so: Along32.o
-	$(LINKER) $(SHLIB) Along32.o -o libAlong32.so -lc
+	$(LINKER) $(SHLIB) -m elf_i386 Along32.o -o libAlong32.so -lc
 
-Along32.o: Along32.asm 
-	$(ASM) -f $(LINUX_FORMAT) $(ASMFLAGS) -o Along32.o Along32.asm
+Along32.o: src/Along32.asm 
+	$(ASM) -f $(LINUX_FORMAT) $(ASMFLAGS) -o Along32.o src/Along32.asm
 
 clean:
 	-rm Along32.o libAlong32.so

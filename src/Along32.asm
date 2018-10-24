@@ -64,7 +64,7 @@
 ; AsciiDigit : convert the actual number to ascii represetation
 ; HexByte : Display the byte in AL in hexadecimal
 
-%include "Macros_Along.inc"
+%include "src/Macros_Along.inc"
 
 %ifnmacro ShowFlag
 ;---------------------------------------------------------------------
